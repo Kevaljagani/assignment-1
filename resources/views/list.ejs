@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <title>list</title>
+</head>
+<body>
+  
+
+
+
+<section class="flex justify-end mt-4 mr-8">
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded-full">
+     <a href="/">Home</a>
+    </button>
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-5 ml-8 rounded-full">
+     <a href="/register">Register</a>
+    </button>
+  </section>
+
+
+  <section class="flex justify-center mt-24">
+        <table class="table-auto">
+          <thead>
+            <tr>
+              <th class="px-4 py-2">Name</th>
+              <th class="px-4 py-2">Contact No</th>
+              <th class="px-4 py-2">Email</th>
+              <th class="px-4 py-2">Address</th>
+              <th class="px-4 py-2">City</th>
+              <th class="px-4 py-2">State</th>
+              <th class="px-4 py-2">Zip</th>
+            </tr>
+          </thead>
+          <% hello.forEach(function(hello) { %>
+          <tbody>
+            <tr class="bg-blue-100">
+              <td class="border px-4 py-2"><%= hello.name %></td>
+              <td class="border px-4 py-2"><%= hello.number %></td>
+              <td class="border px-4 py-2"><%= hello.email %></td>
+              <td class="border px-4 py-2"><%= hello.address %></td>
+              <td class="border px-4 py-2"><%= hello.city %></td>
+              <td class="border px-4 py-2"><%= hello.state %></td>
+              <td class="border px-4 py-2"><%= hello.zip %></td>
+            </tr>
+          </tbody>
+          <% }) %>
+        </table>
+  </section>
+</body>
+</html>
